@@ -24,7 +24,7 @@ __all__ = [
 ]
 
 class SendLogAction(Action):
-    def run(self, splunk_url, index, token, event, timeout):
+    def run(self, splunk_url, index, token, event):
         event_headers = 'Authorization: Splunk ' + token
         event_payload = {'event': event}
 
@@ -32,7 +32,7 @@ class SendLogAction(Action):
             url = splunk_url, 
             headers = event_headers, 
             data = event_payload,
-            timeout = timeout,
+            timeout = 60,
             verify = False
         )
 
