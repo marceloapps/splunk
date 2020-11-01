@@ -26,9 +26,3 @@
       description: "Event message to be sent to Splunk"
       required: true
       position: 3
-    timeout:
-      type: "integer"
-      description: "Amount of time before a timeout is reached. Defaults to 60"
-      default: 60
-      required: false
-      position: 4
